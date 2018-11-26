@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- <item
+        android:id="@+id/button_map_filter"
+        android:icon="@drawable/ic_filter_list_white_2x"
+        android:title="Custom Button"
+        app:showAsAction="always" /> -->
+
+    <item
+        android:id="@+id/enableLightDarkMode"
+        android:title=""
+        app:showAsAction="always"
+        android:icon="@drawable/ic_hdr_strong_white_36pt_2x"
+        />
+
+    <item
+        android:id="@+id/enable3DMap"
+        android:title=""
+        app:showAsAction="always"
+        android:icon="@drawable/ic_3d_rotation_white_36pt_2x"
+        />
+
+    <item
+        android:icon="@drawable/ic_zoom_in_white_36dp"
+        android:title=""
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/zoom_level_city"
+                android:title="@string/main_activity_zoom_level_city" />
+            <item
+                android:id="@+id/zoom_level_street"
+                android:title="@string/main_activity_zoom_level_street" />
+            <item
+                android:id="@+id/zoom_level_building"
+                android:title="@string/main_activity_zoom_level_building" />
+        </menu>
+    </item>
+
+
+</menu>
+

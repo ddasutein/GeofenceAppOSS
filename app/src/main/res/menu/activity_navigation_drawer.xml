@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <include
+        layout="@layout/activity_main" />
+
+    <group android:checkableBehavior="single">
+        <item
+            android:title="@string/navigation_drawer_title_developer_tools">
+            <menu>
+                <item
+                    android:id="@+id/nav_debug_show_gps_coordinates"
+                    android:title="Show GPS Coordinates" />
+
+                <item
+                    android:id="@+id/nav_debug_googlemapsindoor"
+                    android:title="Google Maps Indoor" />
+
+                <item
+                    android:id="@+id/nav_debug_toggle_googleAPI"
+                    android:title="Toggle Google API Client" />
+
+                <item
+                    android:id="@+id/nav_debug_add_tempGeofence"
+                    android:title="Load Geofence from DB" />
+
+                <item
+                    android:id="@+id/nav_debug_clear_geofences"
+                    android:title="Unload all Geofence"/>
+
+            </menu>
+        </item>
+
+        <item
+            android:title="@string/navigation_drawer_title_about">
+            <menu>
+
+                <item
+                    android:id="@+id/nav_about_third_party_software"
+                    android:title="@string/navigation_drawer_third_party_software">
+                </item>
+            </menu>
+
+        </item>
+
+    </group>
+
+</menu>
