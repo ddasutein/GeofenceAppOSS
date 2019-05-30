@@ -1,4 +1,4 @@
-package com.example.dasutein.geofenceapp.GeofenceClass;
+package dev.dasutein.geofenceapp.api;
 
 /*
  * Copyright 2017 Google Inc. All Rights Reserved.
@@ -16,18 +16,13 @@ package com.example.dasutein.geofenceapp.GeofenceClass;
  * limitations under the License.
  */
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.Volley;
-import com.example.dasutein.geofenceapp.JSONObjects.JsonUserAccounts;
 import com.google.android.gms.maps.model.LatLng;
 
 import org.json.JSONArray;
@@ -35,8 +30,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
-
-import static android.content.ContentValues.TAG;
 
 /**
  * Constants used in this sample.

@@ -1,4 +1,4 @@
-package com.example.dasutein.geofenceapp.Activities;
+package dev.dasutein.geofenceapp.api;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -10,14 +10,15 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
-import android.support.v4.app.JobIntentService;
-import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
 import android.util.Log;
 
+import androidx.core.app.JobIntentService;
+import androidx.core.app.NotificationCompat;
+
 import com.android.volley.RequestQueue;
-import com.example.dasutein.geofenceapp.Activities.GeofenceErrorMessages;
 import com.example.dasutein.geofenceapp.R;
+import dev.dasutein.geofenceapp.activities.MainActivity;
 import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingEvent;
 

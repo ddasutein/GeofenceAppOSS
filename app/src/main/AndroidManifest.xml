@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dasutein.geofenceapp">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -11,33 +10,33 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Geofence"
+        android:label="GeofenceOSS"
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/MyTheme.DayNight">
+
+        <!-- For Android Pie (9.0)
+        Ref: https://developer.android.com/about/versions/pie/android-9.0-changes-28#apache-p
+        -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+
         <service
-            android:name=".Activities.GeofenceTransitionService"
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            android:exported="true" />
+            android:name="dev.dasutein.geofenceapp.api.GeofenceTransitionService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <receiver
-            android:name=".Activities.GeofenceBroadcastReceiver"
+            android:name="dev.dasutein.geofenceapp.api.GeofenceBroadcastReceiver"
             android:enabled="true"
             android:exported="true" />
-
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -46,18 +45,14 @@
              sign the APK for publishing.
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
-
         <!-- USE YOUR OWN API KEY -->
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="" />
 
-        <activity
-            android:name=".Activities.MainActivity"
+        <activity android:name="dev.dasutein.geofenceapp.ui.SplashScreenUI"
             android:label="Geofence"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBarContent">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -66,13 +61,18 @@
         </activity>
 
         <activity
-            android:name=".WebViewActivities.AboutGeofenceWebView"
+            android:name="dev.dasutein.geofenceapp.activities.MainActivity"
+            android:label="Geofence"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="dev.dasutein.geofenceapp.ui.AboutGeofenceWebView"
             android:label="Third-party software"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".WebViewActivities.NoActiveNetworkUI"
-            android:theme="@style/AppTheme.NoActionBar" />
-
+        <activity android:name="dev.dasutein.geofenceapp.ui.NoNetworkDialogUI" />
     </application>
 
 </manifest>

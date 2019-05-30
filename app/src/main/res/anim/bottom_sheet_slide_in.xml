@@ -15,19 +15,16 @@
 ~ limitations under the License.
 -->
 
-<resources>
-    <dimen name="keyline_0">2dp</dimen>
-    <dimen name="keyline_1">4dp</dimen>
-    <dimen name="keyline_2">8dp</dimen>
-    <dimen name="keyline_4">16dp</dimen>
-    <dimen name="keyline_5">24dp</dimen>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+  android:duration="250"
+  android:interpolator="@android:anim/accelerate_decelerate_interpolator">
 
-    <dimen name="component_label_horizontal_margin">@dimen/keyline_4</dimen>
+    <translate
+      android:fromYDelta="20%p"
+      android:toYDelta="0"/>
 
-    <dimen name="elevation_default_top_app_bar">4dp</dimen>
+    <alpha
+      android:fromAlpha="0.0"
+      android:toAlpha="1.0"/>
 
-    <!--Emphasis modifiers for "on" colors-->
-    <dimen name="alpha_emphasis_high">@dimen/mtrl_emphasis_high_type</dimen>
-    <dimen name="alpha_emphasis_medium">@dimen/mtrl_emphasis_medium</dimen>
-    <dimen name="alpha_emphasis_disabled">@dimen/mtrl_emphasis_disabled</dimen>
-</resources>
+</set>

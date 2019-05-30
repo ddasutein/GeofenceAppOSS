@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.dasutein.geofenceapp.Activities.GeofenceContentModule.GeofenceContentActivity">
+    tools:context="dev.dasutein.geofenceapp.activities.GeofenceContentModule.GeofenceContentActivity">
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"

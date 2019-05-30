@@ -1,20 +1,19 @@
-package com.example.dasutein.geofenceapp.WebViewActivities;
+package dev.dasutein.geofenceapp.ui;
 
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.dasutein.geofenceapp.R;
-import com.google.android.gms.maps.SupportMapFragment;
 
 public class AboutGeofenceWebView extends AppCompatActivity {
 
@@ -36,7 +35,7 @@ public class AboutGeofenceWebView extends AppCompatActivity {
             webView.loadUrl("https://ddasutein.github.io/geofenceAppAbout/");
 
         } else {
-            Intent showNoActiveNetworkUI = new Intent(this, NoActiveNetworkUI.class);
+            Intent showNoActiveNetworkUI = new Intent(this, NoNetworkDialogUI.class);
             startActivity(showNoActiveNetworkUI);
             return;
         }

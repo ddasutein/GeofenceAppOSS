@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.dasutein.geofenceapp.Activities;
+package dev.dasutein.geofenceapp.api;
 
 import android.content.Context;
 import android.content.res.Resources;

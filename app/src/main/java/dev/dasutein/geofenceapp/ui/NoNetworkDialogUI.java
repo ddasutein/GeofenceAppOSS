@@ -1,25 +1,24 @@
-package com.example.dasutein.geofenceapp.WebViewActivities;
+package dev.dasutein.geofenceapp.ui;
 
 import android.content.Intent;
 import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 import com.example.dasutein.geofenceapp.R;
 
-/** NoActiveNetworkUI
+/** NoNetworkDialogUI
  *
  * Method to block all user interaction if network connection is no longer active. ONLY call this method
  * if an activity requires connection to Google Services or database.
  *
  */
 
-public class NoActiveNetworkUI extends AppCompatActivity {
+public class NoNetworkDialogUI extends AppCompatActivity {
 
     private Button exitButton;
     private Button retryButton;
@@ -41,7 +40,7 @@ public class NoActiveNetworkUI extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         // Quits application
-                        ActivityCompat.finishAffinity(NoActiveNetworkUI.this);
+                        ActivityCompat.finishAffinity(NoNetworkDialogUI.this);
                     }
                 });
 
@@ -51,7 +50,7 @@ public class NoActiveNetworkUI extends AppCompatActivity {
                     public void onClick(View view) {
                         Intent callLocationServicesSettings = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                         startActivity(callLocationServicesSettings);
-                        ActivityCompat.finishAffinity(NoActiveNetworkUI.this);
+                        ActivityCompat.finishAffinity(NoNetworkDialogUI.this);
                     }
                 });
             }
@@ -63,7 +62,7 @@ public class NoActiveNetworkUI extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     // Quits application
-                    ActivityCompat.finishAffinity(NoActiveNetworkUI.this);
+                    ActivityCompat.finishAffinity(NoNetworkDialogUI.this);
                 }
             });
 
@@ -82,6 +81,6 @@ public class NoActiveNetworkUI extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         // Quits application
-        ActivityCompat.finishAffinity(NoActiveNetworkUI.this);
+        ActivityCompat.finishAffinity(NoNetworkDialogUI.this);
     }
 }

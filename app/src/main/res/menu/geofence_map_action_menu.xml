@@ -13,18 +13,18 @@
         android:id="@+id/enableLightDarkMode"
         android:title=""
         app:showAsAction="always"
-        android:icon="@drawable/ic_hdr_strong_white_36pt_2x"
+        android:icon="?attr/ic_lightdark_icon"
         />
 
     <item
         android:id="@+id/enable3DMap"
         android:title=""
         app:showAsAction="always"
-        android:icon="@drawable/ic_3d_rotation_white_36pt_2x"
+        android:icon="?attr/ic_3d_rotation_icon"
         />
 
     <item
-        android:icon="@drawable/ic_zoom_in_white_36dp"
+        android:icon="?attr/ic_zoom_in_icon"
         android:title=""
         app:showAsAction="always">
         <menu>

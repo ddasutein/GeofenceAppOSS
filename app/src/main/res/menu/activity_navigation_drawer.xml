@@ -25,11 +25,15 @@
 
                 <item
                     android:id="@+id/nav_debug_add_tempGeofence"
-                    android:title="Load Geofence from DB" />
+                    android:title="Load Sample Geofence" />
 
                 <item
                     android:id="@+id/nav_debug_clear_geofences"
                     android:title="Unload all Geofence"/>
+
+                <item
+                    android:id="@+id/nav_copy_sample_geofence_coordinates"
+                    android:title="Copy Sample Geofence Coordinates"/>
 
             </menu>
         </item>
@@ -42,6 +46,12 @@
                     android:id="@+id/nav_about_third_party_software"
                     android:title="@string/navigation_drawer_third_party_software">
                 </item>
+
+                <item
+                    android:id="@+id/nav_version_number"
+                    android:title="Version 1.0.0">
+                </item>
+
             </menu>
 
         </item>
