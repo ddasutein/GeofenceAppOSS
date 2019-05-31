@@ -39,10 +39,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="176dp"
         android:layout_marginEnd="176dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="52dp"
         android:text="version-2019.05.1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -68,4 +69,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginEnd="177dp"
+        android:text="Kotlin Build"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/versionLabel"
+        app:layout_constraintVertical_bias="0.235" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

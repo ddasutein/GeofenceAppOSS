@@ -1,13 +1,15 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "dev.dasutein.geofenceapp"
+        applicationId "dev.dasutein.geofenceapp.kotlin"
         minSdkVersion 23
         targetSdkVersion 28
         versionCode 1
-        versionName "2019.05.1"
+        versionName "2019.05.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -36,4 +38,9 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'androidx.core:core:1.0.0'
     implementation 'androidx.core:core:1.0.2'
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
