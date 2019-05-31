@@ -32,6 +32,12 @@ The sample Geofence is located in Tokyo Tower. Coordinates as follows `35.658654
 
 If you don't want to build the app from source, but want to test it on your own device. Go to `Releases` then select the latest version and download the `GeofenceOSS.apk` file. Be sure that you allow third-party sources on your device. 
 
+**Repository Branches**
+
+This current repository contains two branches. The `master` branch is the Java version of this app and the `geofenceoss-kotlin` branch is the Kotlin version of this app. If you prefer to work with the Kotlin language, you may switch to that branch. Likewise for the Java version, select the `master` branch. 
+
+I haven't done much work on the Kotlin branch, apart from converting it within Android Studio and making some minor adjustments. As such, there may be bugs or crashes that do occur on the Kotlin build that may not exist on the Java build. This is also my first time using Kotlin and I'll be using this branch to study the language. 
+
 ## MIT License
 
 MIT License
