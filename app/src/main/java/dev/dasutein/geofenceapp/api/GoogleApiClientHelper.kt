@@ -14,7 +14,7 @@ class GoogleApiClientHelper(
         private val context: Context) : GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks {
 
     /** GOOGLE API  */
-    private lateinit var googleApiClient: GoogleApiClient
+    private var googleApiClient: GoogleApiClient? = null
 
     private val isConnected: Boolean
         get() = googleApiClient != null && googleApiClient!!.isConnected
